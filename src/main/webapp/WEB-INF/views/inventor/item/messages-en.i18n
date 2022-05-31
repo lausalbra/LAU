@@ -28,7 +28,7 @@ inventor.item.form.button.update = Update
 inventor.item.form.button.delete = Delete
 inventor.item.form.button.publish = Publish
 
-inventor.xx1.form.button.create = Crear o ver xx1
+inventor.xx1.form.button.list = Crear o ver xx1
 
 inventor.item.form.error.duplicated = There is already an Item with this code
 inventor.item.form.error.negative-retailPrice = Retail Price cannot be in negative

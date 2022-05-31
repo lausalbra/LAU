@@ -5,12 +5,14 @@
 
 <acme:form>
 	<jstl:choose>
-
+		<jstl:when test="${command == 'create'}">
+			<acme:input-textbox code="inventor.xx1.form.label.code" path="code"/>
+		</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
+			<acme:input-textbox code="inventor.xx1.form.label.code" path="code" readonly="true"/>
 			<acme:input-moment code="inventor.xx1.form.label.xx2" path="xx2" readonly="true"/>
 		</jstl:when>
 	</jstl:choose>
-	<acme:input-textbox code="inventor.xx1.form.label.code" path="code"/>
     <acme:input-textbox code="inventor.xx1.form.label.xx3" path="xx3"/>
     <acme:input-textarea code="inventor.xx1.form.label.xx4" path="xx4"/>
     <acme:input-moment code="inventor.xx1.form.label.xx51" path="xx51"/>
