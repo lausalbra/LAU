@@ -33,7 +33,12 @@ public class AdministratorDashboard implements Serializable {
 	int										numberOfDeniedPatronages;
 	
 	Map<Status,Stats>						statsBudgetOfStatusPatronages;
-
+	
+	//Xx1
+	
+	double 									ratioOfItemWithXx1;
+		
+	Map<String, Stats>         				statsXx6OfXx1;
 
 
 }
