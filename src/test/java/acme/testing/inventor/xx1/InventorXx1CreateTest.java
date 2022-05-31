@@ -24,11 +24,11 @@ public class InventorXx1CreateTest extends TestHarness{
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
-		super.checkButtonExists("Create o view xx1");
-		super.clickOnButton("Create o view xx1");
+		super.checkButtonExists("Xx1");
+		super.clickOnButton("Xx1");
 		super.checkListingEmpty();
 		
-		super.clickOnButton("Create");
+		super.clickOnButton("Create xx1");
 				
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("xx3", xx3);
@@ -37,11 +37,9 @@ public class InventorXx1CreateTest extends TestHarness{
 		super.fillInputBoxIn("xx52", xx52);
 		super.fillInputBoxIn("xx6", xx6);
 		super.fillInputBoxIn("xx7", xx7);
-		super.clickOnSubmit("Create");
+		super.clickOnSubmit("Create xx1");
 		
-		super.checkColumnHasValue(recordIndex, 0, code);
-		super.checkColumnHasValue(recordIndex, 1, xx3);
-		
+				
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
 		super.checkInputBoxHasValue("code", code);
@@ -66,12 +64,12 @@ public class InventorXx1CreateTest extends TestHarness{
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
-		super.checkButtonExists("Create o view xx1");
-		super.clickOnButton("Create o view xx1");
+		super.checkButtonExists("Xx1");
+		super.clickOnButton("Xx1");
 		super.checkListingEmpty();
 		
-		super.clickOnButton("Create");
-				
+		super.clickOnButton("Create xx1");
+		
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("xx3", xx3);
 		super.fillInputBoxIn("xx4", xx4);
@@ -79,7 +77,7 @@ public class InventorXx1CreateTest extends TestHarness{
 		super.fillInputBoxIn("xx52", xx52);
 		super.fillInputBoxIn("xx6", xx6);
 		super.fillInputBoxIn("xx7", xx7);
-		super.clickOnSubmit("Create");
+		super.clickOnSubmit("Create xx1");
 	
 
 		super.checkNotPanicExists();

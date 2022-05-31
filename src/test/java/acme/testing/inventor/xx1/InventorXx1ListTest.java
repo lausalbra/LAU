@@ -9,21 +9,27 @@ import acme.testing.TestHarness;
 public class InventorXx1ListTest extends TestHarness{
 
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/xx1/list-mine.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/xx1/list-mine.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void positiveTest(final int recordIndex,final String name, final String type, final String code,  
-								final String inventor, final String retailPrice, final String published) {
+	public void positiveTest(final int itemRecordIndex, final int recordIndex, final String code, final String xx3,  
+		final String xx4, final String xx51, final String xx52, final String xx6) {
 		
-		super.signIn("patron1", "patron1");
-		super.clickOnMenu("Patron", "List my Items");
+		super.signIn("inventor1", "inventor1");
+		super.clickOnMenu("Inventor", "List my Items");
 		super.checkListingExists();
+		super.sortListing(0, "asc");
+		super.clickOnListingRecord(itemRecordIndex);
 		
-		super.checkColumnHasValue(recordIndex, 0, name);
-		super.checkColumnHasValue(recordIndex, 1, type);
-		super.checkColumnHasValue(recordIndex, 2, code);
-		super.checkColumnHasValue(recordIndex, 3, inventor);
-		super.checkColumnHasValue(recordIndex, 4, retailPrice);
-		super.checkColumnHasValue(recordIndex, 5, published);
+		super.checkButtonExists("Xx1");
+		super.clickOnButton("Xx1");
+		super.checkListingExists();
+				
+		super.checkColumnHasValue(recordIndex, 0, code);
+		super.checkColumnHasValue(recordIndex, 1, xx3);
+		super.checkColumnHasValue(recordIndex, 2, xx4);
+		super.checkColumnHasValue(recordIndex, 3, xx51);
+		super.checkColumnHasValue(recordIndex, 4, xx52);
+		super.checkColumnHasValue(recordIndex, 5, xx6);
 		
 		super.signOut();
 	}

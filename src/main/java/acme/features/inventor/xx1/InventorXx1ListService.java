@@ -66,7 +66,7 @@ public class InventorXx1ListService implements AbstractListService<Inventor, Xx1
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "xx3", "xx6");
+		request.unbind(entity, model, "code", "xx3", "xx4", "xx51", "xx52", "xx6");
 		
 		
 	}

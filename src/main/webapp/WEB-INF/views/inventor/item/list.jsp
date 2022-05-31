@@ -14,5 +14,5 @@
 </acme:list>
 
 <jstl:if test="${command == 'list'}">
-	<acme:button code="inventor.xx1.list.button.create" action="/inventor/item/create"/>
+	<acme:button code="inventor.item.list.button.create" action="/inventor/item/create"/>
 </jstl:if>

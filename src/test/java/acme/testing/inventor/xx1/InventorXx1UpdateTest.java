@@ -23,7 +23,7 @@ public class InventorXx1UpdateTest extends TestHarness{
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
 		
-		super.clickOnButton("Create o view xx1");
+		super.clickOnButton("Xx1");
 		super.clickOnListingRecord(recordIndex);		
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("xx3", xx3);
@@ -61,7 +61,7 @@ public class InventorXx1UpdateTest extends TestHarness{
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
 		
-		super.clickOnButton("Create o view xx1");
+		super.clickOnButton("Xx1");
 		super.clickOnListingRecord(recordIndex);		
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("xx3", xx3);

@@ -88,13 +88,13 @@ public class InventorXx1CreateService implements AbstractCreateService<Inventor,
 
 			if(!errors.hasErrors("xx51")) {
 				final Date minimumStartDate=DateUtils.addMonths(entity.getXx2(), 1);
-				errors.state(request,entity.getXx51().after(minimumStartDate), "xx51", "Inventor.xx1.form.error.xx51");
+				errors.state(request,entity.getXx51().after(minimumStartDate), "xx51", "inventor.xx1.form.error.start-period-not-enough");
 
 			}
 
-			if(!errors.hasErrors("xx52")) {
+			if(!errors.hasErrors("xx52") && !errors.hasErrors("xx51")) {
 				final Date minimumFinishDate=DateUtils.addWeeks(entity.getXx51(), 1);
-				errors.state(request,entity.getXx52().after(minimumFinishDate), "xx52", "Inventor.xx1.form.error.xx52");
+				errors.state(request,entity.getXx52().after(minimumFinishDate), "xx52", "inventor.xx1.form.error.end-period-one-week-before-start-period");
 
 			}
 
@@ -111,9 +111,11 @@ public class InventorXx1CreateService implements AbstractCreateService<Inventor,
 		request.unbind(entity, model, "code", "xx3", "xx4", "xx51", "xx52", "xx6", "xx7");
 		
 		
-			model.setAttribute("masterId", request.getModel().getAttribute("masterId"));
+			model.setAttribute("masterId", request.getModel().getInteger("masterId"));
 		
 	}
+	
+
 	
 	@Override
 	public Xx1 instantiate(final Request<Xx1> request) {
@@ -132,15 +134,17 @@ public class InventorXx1CreateService implements AbstractCreateService<Inventor,
 	@Override
 	public void create(final Request<Xx1> request, final Xx1 entity) {
 		assert request != null;
-        assert entity != null;
-        int masterId;
-        Item item;
-        masterId = request.getModel().getInteger("masterId");
-        item = this.repository.findOneItemById(masterId);
-        item.setXx1(entity);
-        this.repository.save(item);
-        
-        this.repository.save(entity);
+		assert entity != null;
+
+		int itemId;
+		Item item;
+		
+		itemId = request.getModel().getInteger("masterId");
+		item = this.repository.findOneItemById(itemId);
+		item.setXx1(entity);
+		
+		this.repository.save(item);
+		this.repository.save(entity);
 	}
 	
 }

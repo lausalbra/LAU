@@ -4,9 +4,12 @@
 <%@taglib prefix="acme" uri="urn:jsptagdir:/WEB-INF/tags"%>
 
 <acme:list>
-    <acme:list-column code="inventor.xx1.list.label.code" path="code" width="35%"/>
-    <acme:list-column code="inventor.xx1.list.label.xx3" path="xx3" width="30%"/>
-    <acme:list-column code="inventor.xx1.list.label.item" path="item" width="35%"/>
+    <acme:list-column code="inventor.xx1.list.label.code" path="code" width="15%"/>
+    <acme:list-column code="inventor.xx1.list.label.xx3" path="xx3" width="15%"/>
+    <acme:list-column code="inventor.xx1.list.label.xx4" path="xx4" width="15%"/>
+    <acme:list-column code="inventor.xx1.list.label.xx51" path="xx51" width="15%"/>
+    <acme:list-column code="inventor.xx1.list.label.xx52" path="xx52" width="15%"/>
+    <acme:list-column code="inventor.xx1.list.label.xx6" path="xx6" width="15%"/>
 </acme:list>
 <acme:button test="${showCreate == true}" code="inventor.xx1.list.button.create" action="/inventor/xx1/create?masterId=${masterId}"/>
 

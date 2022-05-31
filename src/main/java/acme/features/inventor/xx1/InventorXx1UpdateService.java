@@ -116,13 +116,13 @@ public class InventorXx1UpdateService implements AbstractUpdateService<Inventor,
 
 		if(!errors.hasErrors("xx51")) {
 			final Date minimumStartDate=DateUtils.addMonths(entity.getXx2(), 1);
-			errors.state(request,entity.getXx51().after(minimumStartDate), "xx51", "Inventor.xx1.form.error.xx51");
+			errors.state(request,entity.getXx51().after(minimumStartDate), "xx51", "inventor.xx1.form.error.start-period-not-enough");
 
 		}
 
-		if(!errors.hasErrors("xx52")) {
+		if(!errors.hasErrors("xx52") && !errors.hasErrors("xx51")) {
 			final Date minimumFinishDate=DateUtils.addWeeks(entity.getXx51(), 1);
-			errors.state(request,entity.getXx52().after(minimumFinishDate), "xx52", "Inventor.xx1.form.error.xx52");
+			errors.state(request,entity.getXx52().after(minimumFinishDate), "xx52", "inventor.xx1.form.error.end-period-one-week-before-start-period");
 
 		}
 

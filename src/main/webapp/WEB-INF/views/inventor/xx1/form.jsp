@@ -9,8 +9,8 @@
 			<acme:input-textbox code="inventor.xx1.form.label.code" path="code"/>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(command, 'show, update, delete')}">
-			<acme:input-textbox code="inventor.xx1.form.label.code" path="code" readonly="true"/>
 			<acme:input-moment code="inventor.xx1.form.label.xx2" path="xx2" readonly="true"/>
+			<acme:input-textbox code="inventor.xx1.form.label.code" path="code"/>
 		</jstl:when>
 	</jstl:choose>
     <acme:input-textbox code="inventor.xx1.form.label.xx3" path="xx3"/>
