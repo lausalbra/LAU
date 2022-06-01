@@ -1,5 +1,7 @@
 package acme.testing.inventor.xx1;
 
+import java.time.LocalDate;
+
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -29,8 +31,20 @@ public class InventorXx1CreateTest extends TestHarness{
 		super.checkListingEmpty();
 		
 		super.clickOnButton("Create xx1");
-				
-		super.fillInputBoxIn("code", code);
+		final LocalDate date = LocalDate.now();
+		
+		final int dayValue = date.getDayOfMonth();
+		final String day = String.format("%02d", dayValue);
+
+		final int monthValue = date.getMonthValue();
+		final String month = String.format("%02d", monthValue);
+
+		final int yearValue = date.getYear();
+		final String year = String.format("%02d", yearValue).substring(2);
+
+		final String correctlyDate = String.format("%s%s%s", year,month,day);
+		
+		super.fillInputBoxIn("code", code + correctlyDate);
 		super.fillInputBoxIn("xx3", xx3);
 		super.fillInputBoxIn("xx4", xx4);
 		super.fillInputBoxIn("xx51", xx51);
@@ -42,7 +56,7 @@ public class InventorXx1CreateTest extends TestHarness{
 				
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("code", code);
+		super.checkInputBoxHasValue("code", code + correctlyDate);
 		super.checkInputBoxHasValue("xx3", xx3);
 		super.checkInputBoxHasValue("xx4", xx4);
 		super.checkInputBoxHasValue("xx51", xx51);

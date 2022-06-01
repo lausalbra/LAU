@@ -86,9 +86,10 @@ public class InventorXx1UpdateService implements AbstractUpdateService<Inventor,
 			errors.state(request, existing == null || existing.getId() == entity.getId(), "code", "Inventor.chimpum.form.error.duplicated");
 
 			//RN DE VALIDACION DEL CODIGO DE YYMMDD
-
 			final LocalDate date = LocalDate.now();
-			final int day = date.getDayOfMonth();
+			
+			final int dayValue = date.getDayOfMonth();
+			final String day = String.format("%02d", dayValue);
 
 			final int monthValue = date.getMonthValue();
 			final String month = String.format("%02d", monthValue);
@@ -96,8 +97,8 @@ public class InventorXx1UpdateService implements AbstractUpdateService<Inventor,
 			final int yearValue = date.getYear();
 			final String year = String.format("%02d", yearValue).substring(2);
 
-			final String correctlyDate = String.format("%s%s%d", year,month,day);
-			errors.state(request,entity.getCode().contains(correctlyDate), "code", "Inventor.chimpum.form.error.code");
+			final String correctlyDate = String.format("%s%s%s", year,month,day);
+			errors.state(request,entity.getCode().contains(correctlyDate), "code", "Inventor.xx1.form.error.code");
 
 		}
 
