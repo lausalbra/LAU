@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+"2022-06-03 01:06:39.977","acme.testing.patron.xx1.PatronXx1ListTest","positiveTest",11178,""[1] itemRecordIndex=14, recordIndex=0, code=po01-220529, xx3=Primer xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/05/01 00:00, xx52=2022/05/10 00:00, xx6=EUR 15,000.00"","Record index 0 is out of range"

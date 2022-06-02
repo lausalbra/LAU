@@ -1,0 +1,9 @@
+timestamp,test-class,test-method,time,description,result
+"2022-06-03 00:59:22.786","acme.testing.patron.xx1.PatronXx1CreateTest","positiveTest",12168,""[1] itemRecordIndex=14, recordIndex=0, code=po21-, xx3=Prueba xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/07/08 00:00, xx52=2022/07/17 00:00, xx6=EUR 15,000.00, xx7=https://www.twitch.tv"","Cannot find 'By.name: code'"
+"2022-06-03 00:59:30.232","acme.testing.patron.xx1.PatronXx1CreateTest","negativeTest",7062,""[1] itemRecordIndex=13, recordIndex=0, code=null, xx3=Primer xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/07/08 00:00, xx52=2022/07/17 00:00, xx6=EUR 15,000.00, xx7=https://www.twitch.tv"","TypeError: browsingContext.currentWindowGlobal is null
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-222T00T7', ip: '192.168.0.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_281'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 98.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220313140707, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 8124, moz:profile: C:\Users\laura\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 60e538be-e46f-471e-8738-04ba15549aff
+*** Element info: {Using=class name, value=page-link}"

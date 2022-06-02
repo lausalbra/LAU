@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class AdministratorDashboard implements Serializable {
 	
+
 	// Serialisation identifier 
 
 	protected static final long	serialVersionUID	= 1L;
@@ -33,7 +34,11 @@ public class AdministratorDashboard implements Serializable {
 	int										numberOfDeniedPatronages;
 	
 	Map<Status,Stats>						statsBudgetOfStatusPatronages;
-
-
+	
+	//Xx1
+	
+	double 									ratioOfItemWithXx1;
+	
+	Map<String, Stats>         				statsXx6OfXx1;
 
 }

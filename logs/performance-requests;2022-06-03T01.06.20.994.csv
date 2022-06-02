@@ -1,0 +1,7 @@
+timestamp,simple-path,time
+"2022-06-03 01:01:56.181","/master/welcome",4488
+"2022-06-03 01:01:56.634","/master/welcome",409
+"2022-06-03 01:01:58.913","/master/sign-in",2199
+"2022-06-03 01:02:00.208","/master/welcome",573
+"2022-06-03 01:02:02.023","/patron/item/list",1119
+"2022-06-03 01:02:03.549","/patron/item/show",1241
