@@ -33,6 +33,8 @@
 			<acme:submit code="inventor.item.form.button.create" action="/inventor/item/create"/>
 		</jstl:when>
 	</jstl:choose>
-	
+	<jstl:if test="${command != 'create' && itemType =='TOOL'}">
+		<acme:button code="inventor.xx1.form.button.list" action="/inventor/xx1/list?masterId=${id}"/>
+	</jstl:if>
 
 </acme:form>
