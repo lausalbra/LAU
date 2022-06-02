@@ -24,8 +24,7 @@ public class PatronXx1UpdateTest extends TestHarness{
 			super.checkListingExists();
 			super.sortListing(0, "asc");
 			super.clickOnListingRecord(itemRecordIndex);
-			
-			
+			super.checkButtonExists("Xx1");
 			super.clickOnButton("Xx1");
 			super.clickOnListingRecord(recordIndex);	
 			
@@ -73,7 +72,7 @@ public class PatronXx1UpdateTest extends TestHarness{
 			super.checkListingExists();
 			super.sortListing(0, "asc");
 			super.clickOnListingRecord(itemRecordIndex);
-			
+			super.checkButtonExists("Xx1");
 			super.clickOnButton("Xx1");
 			super.clickOnListingRecord(recordIndex);		
 			super.fillInputBoxIn("code", code);

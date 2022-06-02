@@ -1,0 +1,4 @@
+timestamp,test-class,test-method,time,description,result
+"2022-06-03 01:11:33.965","acme.testing.patron.xx1.PatronXx1ShowTest","positiveTest",13060,""[1] itemRecordIndex=11, recordIndex=0, code=po01-220529, xx2=2022/05/01 00:00, xx3=Primer xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/05/01 00:00, xx52=2022/05/10 00:00, xx6=EUR 15,000.00, xx7=https://www.twitch.tv"","OK"
+"2022-06-03 01:11:34.356","acme.testing.patron.xx1.PatronXx1ShowTest","negativeTest",2,""negativeTest()"","OK"
+"2022-06-03 01:11:34.706","acme.testing.patron.xx1.PatronXx1ShowTest","hackingTest",1,""hackingTest()"","OK"

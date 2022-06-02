@@ -26,10 +26,10 @@ public class PatronXx1CreateTest extends TestHarness{
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
-		//super.checkButtonExists("Create xx1");
-		super.clickOnButton("Create xx1");
-		super.checkListingEmpty();
+		super.checkButtonExists("Xx1");
+		super.clickOnButton("Xx1");
 		
+		super.clickOnButton("Create xx1");
 		final LocalDate date = LocalDate.now();
 		
 		final int dayValue = date.getDayOfMonth();
@@ -77,10 +77,10 @@ public class PatronXx1CreateTest extends TestHarness{
 		super.checkListingExists();
 		super.sortListing(0, "asc");
 		super.clickOnListingRecord(itemRecordIndex);
-		super.checkButtonExists("Create xx1");
-		super.clickOnButton("Create xx1");
-		super.checkListingEmpty();
+		super.checkButtonExists("Xx1");
+		super.clickOnButton("Xx1");
 		
+		super.clickOnButton("Create xx1");
 		super.fillInputBoxIn("code", code);
 		super.fillInputBoxIn("xx3", xx3);
 		super.fillInputBoxIn("xx4", xx4);
