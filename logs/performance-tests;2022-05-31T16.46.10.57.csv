@@ -1,0 +1,2 @@
+timestamp,test-class,test-method,time,description,result
+"2022-05-31 16:45:31.609","acme.testing.inventor.item.InventorItemCreateTest","positiveTest",21097,""[1] recordIndex=0, name=a1, itemType=COMPONENT, code=MNB-098, technology=Technology 02, description=Sample Component, retailPrice=EUR 16.00, optionalLink=null"","The action didn't work well"

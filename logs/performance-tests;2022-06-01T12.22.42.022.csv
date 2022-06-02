@@ -1,0 +1,3 @@
+timestamp,test-class,test-method,time,description,result
+"2022-06-01 12:21:08.054","acme.testing.inventor.xx1.InventorXx1CreateTest","positiveTest",22315,""[1] itemRecordIndex=17, recordIndex=0, code=po21-, xx3=Prueba xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/07/01 00:00, xx52=2022/07/12 00:00, xx6=EUR 15,000.00, xx7=https://www.twitch.tv"","Cannot find 'By.id: list'"
+"2022-06-01 12:21:12.962","acme.testing.inventor.xx1.InventorXx1CreateTest","negativeTest",4348,""[1] itemRecordIndex=22, recordIndex=0, code=null, xx3=Primer xx1, xx4=Esta es una entidad creada para el Control Check de DP, xx51=2022/07/01 00:00, xx52=2022/07/10 00:00, xx6=EUR 15,000.00, xx7=https://www.twitch.tv"","Cannot find 'By.id: list'"
