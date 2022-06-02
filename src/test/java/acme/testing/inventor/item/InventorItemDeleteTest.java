@@ -1,4 +1,4 @@
-package acme.testing.patron.xx1;
+package acme.testing.inventor.item;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -6,19 +6,18 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 
 import acme.testing.TestHarness;
 
-public class PatronXx1ShowTest  extends TestHarness{
+public class InventorItemDeleteTest extends TestHarness{
 	
 	@ParameterizedTest
-	@CsvFileSource(resources = "/patron/xx1/show.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@CsvFileSource(resources = "/inventor/item/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
 	public void positiveTest(final int recordIndex,final String name, final String itemType, final String code,  
-								final String technology, final String description, final String retailPrice, 
-								final String optionalLink, final String username, final String fullname, 
-								final String change) {
+		final String technology, final String description, final String retailPrice, 
+		final String optionalLink, final String username, final String fullname, 
+		final String change) {
 		
-		
-		super.signIn("patron1", "patron1");
-		super.clickOnMenu("Patron", "List my Items");
+		super.signIn("inventor1", "inventor1");
+		super.clickOnMenu("Inventor", "List my Items");
 		super.checkListingExists();
 		super.clickOnListingRecord(recordIndex);
 		
@@ -32,6 +31,23 @@ public class PatronXx1ShowTest  extends TestHarness{
 		super.checkInputBoxHasValue("username", username);
 		super.checkInputBoxHasValue("fullname", fullname);
 		super.checkInputBoxHasValue("change", change);
+		super.clickOnSubmit("Delete");
+		
+		super.signOut();
+		
+	}
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/inventor/item/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+	public void negativeTest(final int recordIndex) {
+		
+		super.signIn("inventor1", "inventor1");
+		super.clickOnMenu("Inventor", "List my Items");
+		super.checkListingExists();
+		super.clickOnListingRecord(recordIndex);
+		
+		super.checkNotButtonExists("Delete");
 		
 		super.signOut();
 	}
