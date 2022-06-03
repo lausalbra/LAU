@@ -1,4 +1,4 @@
-package acme.testing.inventor.xx1;
+package acme.testing.inventor.huster;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -6,13 +6,13 @@ import org.springframework.core.annotation.Order;
 
 import acme.testing.TestHarness;
 
-public class InventorXx1DeleteTest extends TestHarness{
+public class InventorHusterDeleteTest extends TestHarness{
 		
 		@ParameterizedTest
-		@CsvFileSource(resources = "/inventor/xx1/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@CsvFileSource(resources = "/inventor/huster/delete-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
-		public void positiveTest(final int itemRecordIndex, final int recordIndex, final String code, final String xx3,  
-			final String xx4, final String xx51, final String xx52, final String xx6, final String xx7) {
+		public void positiveTest(final int itemRecordIndex, final int recordIndex, final String code, final String themes,  
+			final String statement, final String starPeriod, final String endPeriod, final String provision, final String additionalInfo) {
 			
 			super.signIn("inventor1", "inventor1");
 			super.clickOnMenu("Inventor", "List my Items");
@@ -21,17 +21,17 @@ public class InventorXx1DeleteTest extends TestHarness{
 			super.sortListing(0, "asc");
 			super.clickOnListingRecord(itemRecordIndex);
 			
-			super.checkButtonExists("Xx1");
-			super.clickOnButton("Xx1");
+			super.checkButtonExists("Huster");
+			super.clickOnButton("Huster");
 			super.clickOnListingRecord(recordIndex);
 			
 			super.checkInputBoxHasValue("code", code);
-			super.checkInputBoxHasValue("xx3", xx3);
-			super.checkInputBoxHasValue("xx4", xx4);
-			super.checkInputBoxHasValue("xx51", xx51);
-			super.checkInputBoxHasValue("xx52", xx52);
-			super.checkInputBoxHasValue("xx6", xx6);
-			super.checkInputBoxHasValue("xx7", xx7);
+			super.checkInputBoxHasValue("themes", themes);
+			super.checkInputBoxHasValue("statement", statement);
+			super.checkInputBoxHasValue("starPeriod", starPeriod);
+			super.checkInputBoxHasValue("endPeriod", endPeriod);
+			super.checkInputBoxHasValue("provision", provision);
+			super.checkInputBoxHasValue("additionalInfo", additionalInfo);
 			super.clickOnSubmit("Delete");
 			
 			super.signOut();
@@ -39,7 +39,7 @@ public class InventorXx1DeleteTest extends TestHarness{
 		}
 		
 		@ParameterizedTest
-		@CsvFileSource(resources = "/inventor/xx1/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+		@CsvFileSource(resources = "/inventor/huster/delete-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
 		@Order(10)
 		public void negativeTest(final int itemRecordIndex) {
 			

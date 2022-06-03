@@ -1,0 +1,3 @@
+timestamp,test-class,test-method,time,description,result
+"2022-06-02 22:47:34.119","acme.testing.inventor.huster.InventorHusterDeleteTest","positiveTest",17160,""[1] itemRecordIndex=7, recordIndex=0, code=po01-220529, themes=Primer huster, statement=Esta es una entidad creada para el Control Check de DP, starPeriod=2022/05/01 00:00, endPeriod=2022/05/10 00:00, provision=EUR 15,000.00, additionalInfo=https://www.twitch.tv"","OK"
+"2022-06-02 22:47:44.703","acme.testing.inventor.huster.InventorHusterDeleteTest","negativeTest",10209,""[1] itemRecordIndex=8"","OK"

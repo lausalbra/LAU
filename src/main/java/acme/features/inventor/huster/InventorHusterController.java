@@ -1,31 +1,31 @@
-package acme.features.inventor.xx1;
+package acme.features.inventor.huster;
 
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import acme.entities.xx1s.Xx1;
+import acme.entities.husters.Huster;
 import acme.framework.controllers.AbstractController;
 import acme.roles.Inventor;
 
 @Controller
-public class InventorXx1Controller extends AbstractController<Inventor, Xx1>{
+public class InventorHusterController extends AbstractController<Inventor, Huster>{
 	
 	  @Autowired
-	  protected InventorXx1ListService    listService;
+	  protected InventorHusterListService    listService;
 	  
 	  @Autowired
-	  protected InventorXx1ShowService    showService;
+	  protected InventorHusterShowService    showService;
 	  
 	  @Autowired
-	  protected InventorXx1CreateService createService;
+	  protected InventorHusterCreateService createService;
 	  
 	  @Autowired
-	  protected InventorXx1UpdateService updateService;
+	  protected InventorHusterUpdateService updateService;
 	  
 	  @Autowired
-	  protected InventorXx1DeleteService deleteService;
+	  protected InventorHusterDeleteService deleteService;
 	  
 	  @PostConstruct
 	  protected void initialise() {

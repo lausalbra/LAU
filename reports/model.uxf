@@ -575,7 +575,7 @@ bg=green</panel_attributes>
       <w>140</w>
       <h>49</h>
     </coordinates>
-    <panel_attributes>El endPeriod debe de ser,
+    <panel_attributes>El endPerioddebe de ser,
 al menos, un mes posterior
 al startPerior
 bg=blue</panel_attributes>
@@ -879,16 +879,16 @@ bg=blue</panel_attributes>
       <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Xx1
+Huster
 --
 + code: String {regexp = "^[A-Z]{3}-[0-9]{3}(-[A-Z])?$", unique}
-+ xx2: Date {NotNull, Temporal(TIMETAMP)}
-+ xx3: String {NotBlank, Length(max = 100)}
-+ xx4: String {NotBlank, Length(max = 255)}
-+ xx51: Date {NotNull, Temporal(TIMETAMP)}
-+ xx52: Date {NotNull, Temporal(TIMETAMP)}
-+ xx6: Money {NotBlank, Valid)}
-+ xx7: String {URL}
++ creationMoment: Date {NotNull, Temporal(TIMETAMP)}
++ themes: String {NotBlank, Length(max = 100)}
++ statement: String {NotBlank, Length(max = 255)}
++ starPeriod: Date {NotNull, Temporal(TIMETAMP)}
++ endPeriod: Date {NotNull, Temporal(TIMETAMP)}
++ provision: Money {NotBlank, Valid)}
++ additionalInfo: String {URL}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
@@ -924,7 +924,7 @@ m2=1</panel_attributes>
       <w>161</w>
       <h>49</h>
     </coordinates>
-    <panel_attributes>Solo puede haber una xx1
+    <panel_attributes>Solo puede haber una huster
 de un Item que no este publicado
 bg=blue</panel_attributes>
     <additional_attributes/>

@@ -34,7 +34,7 @@
 		</jstl:when>
 	</jstl:choose>
 	<jstl:if test="${command != 'create' && itemType =='COMPONENT'}">
-		<acme:button code="inventor.xx1.form.button.list" action="/inventor/xx1/list?masterId=${id}"/>
+		<acme:button code="inventor.huster.form.button.list" action="/inventor/huster/list?masterId=${id}"/>
 	</jstl:if>
 
 </acme:form>

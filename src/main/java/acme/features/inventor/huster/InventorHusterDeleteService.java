@@ -1,10 +1,10 @@
-package acme.features.inventor.xx1;
+package acme.features.inventor.huster;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.husters.Huster;
 import acme.entities.items.Item;
-import acme.entities.xx1s.Xx1;
 import acme.framework.components.models.Model;
 import acme.framework.controllers.Errors;
 import acme.framework.controllers.Request;
@@ -12,36 +12,36 @@ import acme.framework.services.AbstractDeleteService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorXx1DeleteService implements AbstractDeleteService<Inventor, Xx1>{
+public class InventorHusterDeleteService implements AbstractDeleteService<Inventor, Huster>{
 	
 	@Autowired
-	protected InventorXx1Repository repository;
+	protected InventorHusterRepository repository;
 	 
 	@Override
-	public boolean authorise(final Request<Xx1> request) {
+	public boolean authorise(final Request<Huster> request) {
 		assert request != null;
 		boolean result;
 		int id;
 		Item item;
 		id = request.getModel().getInteger("id");
-		item = this.repository.findOneItemByXx1Id(id);
+		item = this.repository.findOneItemByHusterId(id);
 		result = (!item.isPublished());
 		
 		return result;
 	}
 
 	@Override
-	public void bind(final Request<Xx1> request, final Xx1 entity, final Errors errors) {
+	public void bind(final Request<Huster> request, final Huster entity, final Errors errors) {
 		assert request != null;
         assert entity != null;
         assert errors != null;
         
-        request.bind(entity, errors, "xx2", "xx3", "xx4", "xx51", "xx52", "xx52", "xx6", "xx7");
+        request.bind(entity, errors, "creationMoment", "themes", "statement", "starPeriod", "endPeriod", "endPeriod", "provision", "additionalInfo");
 		
 	}
 	
 	@Override
-	public void validate(final Request<Xx1> request, final Xx1 entity, final Errors errors) {
+	public void validate(final Request<Huster> request, final Huster entity, final Errors errors) {
 		assert request != null;
         assert entity != null;
         assert errors != null;
@@ -49,37 +49,37 @@ public class InventorXx1DeleteService implements AbstractDeleteService<Inventor,
 	}
 
 	@Override
-	public Xx1 findOne(final Request<Xx1> request) {
+	public Huster findOne(final Request<Huster> request) {
 		assert request != null;
 		
-		Xx1 result;
+		Huster result;
 		int id;
 		
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneXx1ById(id);
+		result = this.repository.findOneHusterById(id);
 		
 		return result;
 	}
 
 	@Override
-	public void delete(final Request<Xx1> request, final Xx1 entity) {
+	public void delete(final Request<Huster> request, final Huster entity) {
 		assert request != null;
 		assert entity != null;
 		
 		Item item;
-		item = this.repository.findOneItemByXx1Id(entity.getId());
+		item = this.repository.findOneItemByHusterId(entity.getId());
 		//this.repository.delete(item); Borraba al padre tambien
-		item.setXx1(null); //Para no borrar al padre
+		item.setHuster(null); //Para no borrar al padre
 		this.repository.delete(entity);
 	}
 
 	@Override
-	public void unbind(final Request<Xx1> request, final Xx1 entity, final Model model) {
+	public void unbind(final Request<Huster> request, final Huster entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		request.unbind(entity, model, "code", "xx3", "xx4", "xx51", "xx52", "xx6", "xx7");
+		request.unbind(entity, model, "code", "themes", "statement", "starPeriod", "endPeriod", "provision", "additionalInfo");
 		
 		
 			model.setAttribute("masterId", request.getModel().getAttribute("masterID"));

@@ -1,4 +1,4 @@
-package acme.entities.xx1s;
+package acme.entities.husters;
 
 import java.util.Date;
 
@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Xx1 extends AbstractEntity{
+public class Huster extends AbstractEntity{
 	
 	//Serialisation identifier
 	
@@ -33,37 +33,39 @@ public class Xx1 extends AbstractEntity{
 	
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "^\\w{2}\\d{2}-\\d{6}$") //yymmdd --> d{6} lo otro me lo dan
+	//@Pattern(regexp = "^\\w{2}\\d{2}-\\d{6}$") //yymmdd --> d{6} lo otro me lo dan
+	
+	@Pattern(regexp = "^\\d{6}/\\w{2,4}$") //yymmdd/tt --> d{6} lo otro me lo dan
 	
 	protected String code; //Code
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@Past
-	protected Date xx2; // Creation Moment
+	protected Date creationMoment; // Creation Moment
 	
 	@NotBlank
 	@Length(min = 1, max=100)
-	protected String xx3; // Title
+	protected String themes; // Title
 	
 	@NotBlank
 	@Length(min = 1, max=255)
-	protected String xx4; // Description
+	protected String statement; // Description
 	
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date xx51; //Start of the period
+	protected Date starPeriod; //Start of the period
 	
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date xx52; // End of the period (at least one month ahead and one week long)
+	protected Date endPeriod; // End of the period (at least one month ahead and one week long)
 	
 	@Valid
 	@NotNull
-	protected Money xx6; // Budget positive
+	protected Money provision; // Budget positive
 	
 	@URL
-	protected String xx7; // Optional Link
+	protected String additionalInfo; // Optional Link
 //	
 //	@ManyToOne(optional = false)
 //    @Valid

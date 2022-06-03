@@ -1,4 +1,4 @@
-package acme.features.inventor.xx1;
+package acme.features.inventor.huster;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Configuration;
-import acme.entities.xx1s.Xx1;
+import acme.entities.husters.Huster;
 import acme.features.authenticated.moneyExchange.AuthenticatedMoneyExchangePerformService;
 import acme.forms.MoneyExchange;
 import acme.framework.components.models.Model;
@@ -16,27 +16,27 @@ import acme.framework.services.AbstractShowService;
 import acme.roles.Inventor;
 
 @Service
-public class InventorXx1ShowService implements AbstractShowService<Inventor, Xx1>{
+public class InventorHusterShowService implements AbstractShowService<Inventor, Huster>{
 	
 	@Autowired
-	protected InventorXx1Repository repository;	
+	protected InventorHusterRepository repository;	
 	 
 	@Override
-	public boolean authorise(final Request<Xx1> request) {
+	public boolean authorise(final Request<Huster> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public Xx1 findOne(final Request<Xx1> request) {
+	public Huster findOne(final Request<Huster> request) {
 		assert request != null;
 		
-		Xx1 result;
+		Huster result;
 		int id;
 		
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneXx1ById(id);
+		result = this.repository.findOneHusterById(id);
 		
 		return result;
 	}
@@ -61,17 +61,17 @@ public class InventorXx1ShowService implements AbstractShowService<Inventor, Xx1
 	}
 	
 	@Override
-	public void unbind(final Request<Xx1> request, final Xx1 entity, final Model model) {
+	public void unbind(final Request<Huster> request, final Huster entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 		
-		final MoneyExchange change = this.change(entity.getXx6());
+		final MoneyExchange change = this.change(entity.getProvision());
 		model.setAttribute("change", change.getTarget());
 		
-		request.unbind(entity, model, "code", "xx2", "xx3", "xx4", "xx51", "xx52", "xx6", "xx7");
+		request.unbind(entity, model, "code", "creationMoment", "themes", "statement", "starPeriod", "endPeriod", "provision", "additionalInfo");
 		
-		if(this.repository.findOneItemByXx1Id(entity.getId()).isPublished()){
+		if(this.repository.findOneItemByHusterId(entity.getId()).isPublished()){
 			model.setAttribute("canUpdateDelete", false);
 		}else {
 			model.setAttribute("canUpdateDelete", true);

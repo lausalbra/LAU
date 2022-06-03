@@ -1,4 +1,4 @@
-package acme.features.inventor.xx1;
+package acme.features.inventor.huster;
 
 import java.util.Collection;
 
@@ -6,34 +6,34 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.entities.Configuration;
+import acme.entities.husters.Huster;
 import acme.entities.items.Item;
-import acme.entities.xx1s.Xx1;
 import acme.forms.MoneyExchange;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface InventorXx1Repository extends AbstractRepository {
+public interface InventorHusterRepository extends AbstractRepository {
 	
 
 	//Listado
-	@Query("select i.xx1 from Item i where i.id = :id")
-	Collection<Xx1> findManyXx1ByItemId (int id);
+	@Query("select i.huster from Item i where i.id = :id")
+	Collection<Huster> findManyHusterByItemId (int id);
 	
 	//Solo poder crear un chimpun si y solo si el item no esta publicado y no tiene chimpun asociados
 	@Query("select i from Item i where i.id = :id")
 	Item findOneItemById(int id);
 	
 	//Para el show
-	@Query("select x from Xx1 x where x.id = :id")
-	Xx1 findOneXx1ById(int id);
+	@Query("select x from Huster x where x.id = :id")
+	Huster findOneHusterById(int id);
 	
 	//Reglas de negocio del create
-	@Query("select c from Xx1 c where c.code = :code")
-	Xx1 findOneXx1ByCode(String code);
+	@Query("select c from Huster c where c.code = :code")
+	Huster findOneHusterByCode(String code);
 	
 	//El update
-	@Query("select i from Item i where i.xx1.id = :id")
-	Item findOneItemByXx1Id(int id);
+	@Query("select i from Item i where i.huster.id = :id")
+	Item findOneItemByHusterId(int id);
 	
 	// Para la conversion de monedas
 	@Query("select c from Configuration c")

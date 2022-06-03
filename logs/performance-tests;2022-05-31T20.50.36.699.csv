@@ -1,3 +1,3 @@
 timestamp,test-class,test-method,time,description,result
-"2022-05-31 20:48:24.364","acme.testing.inventor.xx1.InventorXx1DeleteTest","positiveTest",17170,""[1] itemRecordIndex=14, recordIndex=0, code=po01-220529, xx3=2022/05/01 00:00, xx4=Primer xx1, xx51=Esta es una entidad creada para el Control Check de DP, xx52=2022/05/01 00:00, xx6=2022/05/10 00:00, xx7=EUR 15,000.00"","Cannot find 'By.name: code'"
-"2022-05-31 20:48:35.53","acme.testing.inventor.xx1.InventorXx1DeleteTest","negativeTest",10630,""[1] itemRecordIndex=16"","OK"
+"2022-05-31 20:48:24.364","acme.testing.inventor.huster.InventorHusterDeleteTest","positiveTest",17170,""[1] itemRecordIndex=14, recordIndex=0, code=po01-220529, themes=2022/05/01 00:00, statement=Primer huster, starPeriod=Esta es una entidad creada para el Control Check de DP, endPeriod=2022/05/01 00:00, provision=2022/05/10 00:00, additionalInfo=EUR 15,000.00"","Cannot find 'By.name: code'"
+"2022-05-31 20:48:35.53","acme.testing.inventor.huster.InventorHusterDeleteTest","negativeTest",10630,""[1] itemRecordIndex=16"","OK"

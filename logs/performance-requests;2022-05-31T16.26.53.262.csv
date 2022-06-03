@@ -5,9 +5,9 @@ timestamp,simple-path,time
 "2022-05-31 16:19:51.355","/master/welcome",1151
 "2022-05-31 16:19:55.519","/inventor/item/list",3375
 "2022-05-31 16:20:00.937","/inventor/item/show",5053
-"2022-05-31 16:20:03.278","/inventor/xx1/list",2228
-"2022-05-31 16:20:07.061","/inventor/xx1/create",1640
-"2022-05-31 16:20:10.249","/inventor/xx1/create",1214
+"2022-05-31 16:20:03.278","/inventor/huster/list",2228
+"2022-05-31 16:20:07.061","/inventor/huster/create",1640
+"2022-05-31 16:20:10.249","/inventor/huster/create",1214
 "2022-05-31 16:20:13.498","/master/welcome",1014
 "2022-05-31 16:20:14.409","/master/welcome",872
 "2022-05-31 16:20:15.587","/master/sign-in",581

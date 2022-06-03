@@ -1,0 +1,37 @@
+inventor.huster.list.label.code = Código
+inventor.huster.list.label.themes = Themes
+inventor.huster.list.label.statement = Statement
+inventor.huster.list.label.starPeriod = StarPeriod
+inventor.huster.list.label.endPeriod= endPeriod
+inventor.huster.list.label.provision = Provision
+
+inventor.huster.list.button.create = Crear item
+
+
+inventor.huster.form.label.code = Código:
+inventor.huster.form.label.creationMoment = CreationMoment:
+inventor.huster.form.label.themes = Themes:
+inventor.huster.form.label.statement = Statement:
+inventor.huster.form.label.starPeriod = StarPeriod:
+inventor.huster.form.label.endPeriod= endPeriod:
+inventor.huster.form.label.provision = Provision:
+inventor.huster.form.label.additionalInfo = Additional Info:
+inventor.huster.form.label.item = Item:
+
+inventor.huster.form.button.update = Actualizar
+inventor.huster.form.button.delete = Borrar
+inventor.huster.form.button.create = item
+
+
+
+inventor.huster.form.error.code-date = La fecha no es la actual
+inventor.huster.form.error.regex =  El código debe ser la fecha actual (yy-mm-dd) seguido de un ":" y cuatro números
+inventor.huster.form.error.not-unique = El código no es único
+inventor.huster.form.error.spam = Este texto es un texto spam
+inventor.huster.form.error.start-period-not-enough = La fecha debe ser al menos un mes después de la fecha de creación
+inventor.huster.form.error.end-period-one-week-before-start-period = La fecha debe ser al menos una semana después de la fecha de inicio
+inventor.huster.form.error.incorrect-currency = Esta divisa no está disponible en el sistema
+inventor.huster.form.error.negative-provision = The budget must not be negative
+Inventor.huster.form.error.non-accepted-provision = The budget not accepted
+inventor.huster.form.error.item-null = ebe de haber un item
+inventor.huster.form.error.item-does-not-exist = TEl item no existe

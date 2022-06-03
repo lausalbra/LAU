@@ -85,7 +85,7 @@ public class PatronPatronageCreateService implements AbstractCreateService<Patro
         
         if(!errors.hasErrors("endPeriod") && entity.getStartPeriod()!=null) {
         	final Date startPeriod = entity.getStartPeriod();
-        	final Date endPeriod = entity.getEndPeriod();
+        	final Date endPeriod= entity.getEndPeriod();
         	final Date moment = new Date(startPeriod.getTime() + 604799999); // Una semana menos un milisegundo
         	errors.state(request, endPeriod.after(moment), "endPeriod", "patron.patronage.form.error.end-period-one-week-before-start-period");
         }
