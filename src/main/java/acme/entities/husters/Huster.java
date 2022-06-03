@@ -35,7 +35,7 @@ public class Huster extends AbstractEntity{
 	@Column(unique = true)
 	//@Pattern(regexp = "^\\w{2}\\d{2}-\\d{6}$") //yymmdd --> d{6} lo otro me lo dan
 	
-	@Pattern(regexp = "^\\d{6}/\\w{2,4}$") //yymmdd/tt --> d{6} lo otro me lo dan
+	@Pattern(regexp = "^\\d{2}\\/\\d{4}\\/\\w{2,4}$") //yymmdd/tt --> d{6} lo otro me lo dan
 	
 	protected String code; //Code
 	

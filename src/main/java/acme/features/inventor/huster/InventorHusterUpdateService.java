@@ -97,7 +97,7 @@ public class InventorHusterUpdateService implements AbstractUpdateService<Invent
 			final int yearValue = date.getYear();
 			final String year = String.format("%02d", yearValue).substring(2);
 
-			final String correctlyDate = String.format("%s%s%s", year,month,day);
+			final String correctlyDate = String.format("%s"+"/"+"%s%s", year,month,day);
 			errors.state(request,entity.getCode().contains(correctlyDate), "code", "Inventor.Huster.form.error.code");
 
 		}
