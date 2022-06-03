@@ -36,9 +36,9 @@ public class InventorHusterUpdateTest extends TestHarness{
 		final String month = String.format("%02d", monthValue);
 		final int yearValue = date.getYear();
 		final String year = String.format("%02d", yearValue).substring(2);
-		final String correctlyDate = String.format("%s%s%s", year,month,day);
+		final String correctlyDate = String.format("%s"+"/"+"%s%s", year,month,day);
 		
-		super.fillInputBoxIn("code", code + correctlyDate);
+		super.fillInputBoxIn("code", correctlyDate + code);
 		super.fillInputBoxIn("themes", themes);
 		super.fillInputBoxIn("statement", statement);
 		super.fillInputBoxIn("starPeriod", starPeriod);
@@ -47,12 +47,12 @@ public class InventorHusterUpdateTest extends TestHarness{
 		super.fillInputBoxIn("additionalInfo", additionalInfo);
 		super.clickOnSubmit("Update");
 		
-		super.checkColumnHasValue(recordIndex, 0, code + correctlyDate);
+		super.checkColumnHasValue(recordIndex, 0, correctlyDate + code);
 		super.checkColumnHasValue(recordIndex, 1, themes);
 		
 		super.clickOnListingRecord(recordIndex);
 		super.checkFormExists();
-		super.checkInputBoxHasValue("code", code + correctlyDate);
+		super.checkInputBoxHasValue("code", correctlyDate + code);
 		super.checkInputBoxHasValue("themes", themes);
 		super.checkInputBoxHasValue("statement", statement);
 		super.checkInputBoxHasValue("starPeriod", starPeriod);

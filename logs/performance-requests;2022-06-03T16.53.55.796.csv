@@ -1,0 +1,24 @@
+timestamp,simple-path,time
+"2022-06-03 16:52:20.582","/master/welcome",9805
+"2022-06-03 16:52:21.412","/master/welcome",731
+"2022-06-03 16:52:26.043","/master/sign-in",4513
+"2022-06-03 16:52:28.625","/master/welcome",714
+"2022-06-03 16:52:32.24","/inventor/item/list",2697
+"2022-06-03 16:52:36.776","/inventor/item/show",3611
+"2022-06-03 16:52:38.098","/inventor/huster/list",1113
+"2022-06-03 16:52:42.407","/inventor/huster/create",2167
+"2022-06-03 16:52:46.249","/inventor/huster/list",1126
+"2022-06-03 16:52:47.603","/inventor/huster/show",1102
+"2022-06-03 16:52:48.775","/master/welcome",595
+"2022-06-03 16:52:50.541","/master/welcome",1106
+"2022-06-03 16:52:53.377","/master/welcome",578
+"2022-06-03 16:52:54.08","/master/welcome",654
+"2022-06-03 16:52:55.313","/master/sign-in",1149
+"2022-06-03 16:52:57.578","/master/welcome",616
+"2022-06-03 16:52:59.473","/inventor/item/list",1125
+"2022-06-03 16:53:02.372","/inventor/item/show",2347
+"2022-06-03 16:53:03.801","/inventor/huster/list",1306
+"2022-06-03 16:53:07.71","/inventor/huster/create",1145
+"2022-06-03 16:53:10.939","/inventor/huster/create",1678
+"2022-06-03 16:53:12.033","/master/welcome",993
+"2022-06-03 16:53:12.673","/master/welcome",568
